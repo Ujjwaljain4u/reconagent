@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reconagent"
+version = "0.1.0"
+description = "AI-powered passive OSINT reconnaissance agent — aggregates public data across domain, username, email, phone, and image vectors, cross-correlates findings, and produces an LLM-summarized recon report with OPSEC recommendations."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "click>=8.1",
+    "requests>=2.31",
+    "PyYAML>=6.0",
+    "python-whois>=0.9.4",
+    "dnspython>=2.6",
+    "ipwhois>=1.3",
+    "phonenumbers>=8.13",
+    "exifread>=3.0",
+    "pypdf>=4.0",
+    "Pillow>=10.0",
+    "Jinja2>=3.1",
+    "rich>=13.7",
+    "python-dotenv>=1.0",
+    "rapidfuzz>=3.0",
+    "imagehash>=4.3",
+    "opencv-python-headless>=4.8",
+    "pytesseract>=0.3",
+]
+
+[project.optional-dependencies]
+llm = ["ollama>=0.2", "groq>=0.9"]
+web = ["fastapi>=0.110", "uvicorn[standard]>=0.29", "jinja2>=3.1", "python-multipart>=0.0.9"]
+ner = ["spacy>=3.8"]  # after installing: python -m spacy download en_core_web_sm
+
+[project.scripts]
+reconagent = "reconagent.cli:cli"
+
+[tool.setuptools.packages.find]
+where = ["src"]
