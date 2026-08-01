@@ -3,7 +3,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](pyproject.toml)
 
-**Live demo:** _add your Render URL here once deployed, e.g. https://reconagent-web.onrender.com_
 
 <div align="center">
   <img src="docs/screenshots/screenshot_1_home.png" width="800" alt="ReconAgent - Home"><br><br>
@@ -25,7 +24,7 @@ adversarial LLM testing.
 
 ## What makes this "not a toy"
 
-- **25+ real collectors** across domain, username, email, phone, image, and
+- **26 real collectors** across domain, username, email, phone, image, and
   PDF targets. Most are free with no key required; a handful are optional-key
   (VirusTotal, Abstract Phone Intelligence, Telegram Bot API). Every source
   is genuinely free and currently working, backed by a real public API or
@@ -144,7 +143,7 @@ it added no value for this tool's single-image-upload interface (see
 ## Architecture
 
 ```
-Collector layer (25+ pluggable modules, one per source)
+Collector layer (26 pluggable modules, one per source)
         |
         v
 Aggregator (parallel run, per-collector fault isolation, timeouts)

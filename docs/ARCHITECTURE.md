@@ -22,7 +22,7 @@
               domain_whois   username_...   exif_metadata
               dns_records    github_...     pdf_metadata
               crtsh_...                     ...
-              (13 total, one file each, BaseCollector interface)
+              (26 total, one file each, BaseCollector interface)
                      │              │              │
                      └──────────────┼──────────────┘
                                     ▼
